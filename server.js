@@ -119,13 +119,7 @@ function runinit() {
       type: "input",
       message: "What is the salary of the role?"
     }]
-    // ,
-    // {
-    //   name: "EmployeeRole",
-    //   type: "List",
-    //   message: "What is the employee's role?",
-    //   choice: ["sales","customer service","manager"]
-    // }
+
     
     ).then(function(answer) {
       connection.query(
@@ -157,13 +151,7 @@ function runinit() {
       type: "input",
       message: "What is the last name of employee?"
     }]
-    // ,
-    // {
-    //   name: "EmployeeRole",
-    //   type: "List",
-    //   message: "What is the employee's role?",
-    //   choice: ["sales","customer service","manager"]
-    // }
+ 
     
     ).then(function(answer) {
       connection.query(
