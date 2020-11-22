@@ -99,7 +99,6 @@ function runinit() {
         function(err) {
           if (err) throw err;
           console.log("Your department was created successfully!");
-          // re-prompt the user for if they want to bid or post
           runinit();
       });
     });
@@ -131,7 +130,6 @@ function runinit() {
         function(err) {
           if (err) throw err;
           console.log("Your role was created successfully!");
-          // re-prompt the user for if they want to bid or post
           runinit();
       });
     });
@@ -163,7 +161,6 @@ function runinit() {
         function(err) {
           if (err) throw err;
           console.log("Your employee was created successfully!");
-          // re-prompt the user for if they want to bid or post
           runinit();
       });
     });
@@ -198,11 +195,9 @@ function runinit() {
 // ----------- Update employee roles
 
 function updateEmployeeRole() {
-  // query the database for all items being auctioned
   connection.query("SELECT * FROM employee", function(err, results) {
     if (err) throw err;
     console.table(results)
-    // once you have the items, prompt the user for which they'd like to bid on
     inquirer
       .prompt([
         {
@@ -232,9 +227,8 @@ function updateEmployeeRole() {
           }
         }
 
-        // determine if bid was high enough
+  
         if (chosenItem.roleUpdate !=="") {
-          // bid was high enough, so update db, let the user know, and start over
           connection.query(
             "UPDATE employee SET ? WHERE ?",
             [
@@ -261,7 +255,6 @@ function updateEmployeeRole() {
 }
 
 
-// -----------------------------------------
 
 
   
