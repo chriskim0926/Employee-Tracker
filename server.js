@@ -20,6 +20,9 @@ connection.connect(function (err) {
 });
 
 function runinit() {
+  console.log("------------------------------------------------------------------")
+  console.log("-                    EMPLOYEE TRACKER                            -")
+  console.log("------------------------------------------------------------------")
   inquirer
     .prompt({
       name: "action",
